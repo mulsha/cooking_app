@@ -188,6 +188,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 10, right: 7),
                         child: TextFormField(
+                            obscureText: securetext,
                             style: TextStyle(
                               fontSize: width * 0.04,
                             ),
@@ -195,12 +196,12 @@ class _CreateAccountState extends State<CreateAccount> {
                                 suffixIcon: IconButton(
                                     onPressed: () {
                                       setState(() {
-                                        securetext=!securetext;
+                                        securetext = !securetext;
                                       });
                                     },
                                     icon: Icon(securetext
-                                        ? Icons.visibility
-                                        : Icons.visibility_off)),
+                                        ? Icons.visibility_off
+                                        : Icons.visibility)),
                                 border: InputBorder.none,
                                 hintText: 'Enter your Password')),
                       ),

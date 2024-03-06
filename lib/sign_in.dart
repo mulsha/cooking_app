@@ -134,6 +134,7 @@ class _SignInState extends State<SignIn> {
                     child: Padding(
                       padding: const EdgeInsets.only(left: 10, right: 7),
                       child: TextFormField(
+                          obscureText: securetext,
                           // controller: name,
                           style: TextStyle(
                               fontSize: width * 0.04, color: AppColor.black),
@@ -145,8 +146,8 @@ class _SignInState extends State<SignIn> {
                                     });
                                   },
                                   icon: Icon(securetext
-                                      ? Icons.visibility
-                                      : Icons.visibility_off)),
+                                      ? Icons.visibility_off
+                                      : Icons.visibility)),
                               border: InputBorder.none,
                               hintText: 'Enter your Password')),
                     ),
