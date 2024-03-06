@@ -18,12 +18,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
-            child: Container(
-      height: 100,
-      width: 200,
-      color: Colors.red,
-    )));
+    return const Scaffold(
+        );
   }
 }
