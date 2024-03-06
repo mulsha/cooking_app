@@ -10,6 +10,16 @@ class CreateAccount extends StatefulWidget {
 }
 
 class _CreateAccountState extends State<CreateAccount> {
+  bool securetext = false;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+
+    super.initState();
+    securetext = true;
+  }
+
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -181,8 +191,16 @@ class _CreateAccountState extends State<CreateAccount> {
                             style: TextStyle(
                               fontSize: width * 0.04,
                             ),
-                            decoration: const InputDecoration(
-                                suffixIcon: Icon(Icons.visibility),
+                            decoration: InputDecoration(
+                                suffixIcon: IconButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        securetext=!securetext;
+                                      });
+                                    },
+                                    icon: Icon(securetext
+                                        ? Icons.visibility
+                                        : Icons.visibility_off)),
                                 border: InputBorder.none,
                                 hintText: 'Enter your Password')),
                       ),
