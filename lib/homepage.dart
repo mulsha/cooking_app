@@ -258,6 +258,7 @@ class _HomePageState extends State<HomePage> {
       ], color: AppColor.offwhite, borderRadius: BorderRadius.circular(18)),
       child: Column(
         children: [
+          //IMAGE
           ClipRRect(
             borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(18), topRight: Radius.circular(18)),
@@ -274,6 +275,7 @@ class _HomePageState extends State<HomePage> {
                 const EdgeInsets.only(left: 8, right: 8, top: 5, bottom: 0),
             child: Row(
               children: [
+                //SNACK1
                 Container(
                   height: height * 0.03,
                   width: width * 0.23,
@@ -289,6 +291,7 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   width: width * 0.02,
                 ),
+                //SNACK2
                 Container(
                   height: height * 0.03,
                   width: width * 0.23,
@@ -304,8 +307,9 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
+          //DETAIL
           Padding(
-            padding: const EdgeInsets.only(left: 8),
+            padding: const EdgeInsets.only(left: 8,top: 6),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -319,11 +323,13 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.only(left: 8, right: 8, top: 5),
             child: Row(
               children: [
+                //PROFILE PIC
                 CircleAvatar(
                   radius: height * 0.02,
                   backgroundImage: AssetImage(profile),
                 ),
                 const Spacer(),
+                //ICON
                 IconButton(
                     onPressed: () {},
                     icon: const Icon(Icons.favorite_border_outlined))
